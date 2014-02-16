@@ -1,0 +1,78 @@
+$bubble_color: #BCBABF;
+$quote_box_width: 592px;
+$quote_box_height: 448px;
+$arrow_location: $quote_box_width/2 - 30;
+$author_box_width: 100px;
+$author_location: (($quote_box_width/2) - ($author_box_width/2));
+$link_color: #6b9eb4;
+
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+    margin-top: 5%;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+
+.quote_box {
+	height: $quote_box_height;
+	width: $quote_box_width;
+	background: $bubble_color;
+	border-radius: 20px;
+
+}
+
+.text {
+	color:white; 
+	font-size: 150px; 
+	padding: 10px; 
+	text-align: center; 
+	padding-top: 30%;
+}
+
+.text_over_8 {
+	color: white; 
+	font-size: 40px; 
+	padding: 10px; 
+	line-height: 45px; 
+	text-align: center; 
+	padding-top: $quote_box_height/2 - 45;
+	
+}
+
+.arrow-down_2 {
+	width: 0;
+	height: 0;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	margin-left: $arrow_location;
+	border-top: 22px solid $bubble_color; 
+	margin-top: -1px;
+}
+
+
+.author {
+	margin-top: 5px; 
+	color: darken($bubble_color, 30%); 
+	font-size:15px; 
+	width: $author_box_width; 
+	text-align: center;
+	margin-left: $author_location;
+}
+
+.export_to_pdf {
+	margin-top: 3%;
+	color: $link_color;
+}
+
+
+@media print {
+
+a {display:none;}
+
+
+}

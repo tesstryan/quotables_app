@@ -1,0 +1,46 @@
+<h1>Quotes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Author</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @quotes.each do |quote| %>
+    <tr>
+      <td><%= quote.content %></td>
+      <td><%= quote.author %></td>
+      <td><%= link_to 'Show', quote_url(quote) %></td>
+      <td><%= link_to 'Edit', edit_quote_url(quote) %></td>
+      <td><%= link_to 'Destroy', quote_url(quote), method: 'delete', data: { confirm: "Do you really want to delete this quote?" } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+
+<h1>New Quote</h1>
+
+<%= form_tag(quotes_url, method: 'post') do %>
+  <div>
+    <%= label_tag :content %><br />
+    <%= text_area_tag :content %>
+  </div>
+
+  <div>
+    <%= label_tag :author %><br />
+    <%= text_field_tag :author %>
+  </div>
+
+  <div>
+    <%= submit_tag "Create Quote" %>
+  </div>
+<% end %>
+
+

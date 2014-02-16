@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quote Me</title>
+  <%= stylesheet_link_tag    "application", media: "all"%>
+  <!-- removed , "data-turbolinks-track" => true from above -->
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://necolas.github.io/normalize.css/3.0.0/normalize.css">
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div class="container">
+		<%= yield %>
+	</div>
+
+</body>
+</html>
